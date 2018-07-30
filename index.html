@@ -2,30 +2,70 @@
 <html lang="en">
 
   <head>
-    <link rel="stylesheet" href="css/mediaelementplayer.min.css" />
-    <link rel="stylesheet" href="css/styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/mediaelementplayer.css" />
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="css/normalize.css" />
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/mediaelement-and-player.min.js"></script>
   </head>
 
 <body class="container">
 
   <div class="wrapper">
-    <video class="videoInsert" width="640" height="360" controls>
-      <source type="video/mp4" src="video/video.mp4" />
-      <source type="video/ogg" src="video/video.ogg" />
-      Your browser does not support the video tag.
-    </video>
+
+    <div class="videoWrapper">
+      <video width="640" height="360" controls>
+        <source type="video/mp4" src="video/video.mp4" />
+        <source type="video/ogg" src="video/video.ogg" />
+        <!-- <track label="English" kind="subtitles" srclang="en" src="captions.vtt" default> -->
+        Your browser does not support the video tag.
+      </video>
+    </div>
+
+    <div id="content">
+      <p>
+        <span data-start="0.240" data-end="4.130">
+          Now that we've looked at the architecture
+          of the internet, let's see how you might
+        </span>
+
+        <span data-start="4.130" data-end="7.535">
+          connect your personal devices to
+          the internet inside your house.
+        </span>
+
+        <span data-start="7.535" data-end="11.270">
+          Well there are many ways to
+          connect to the internet, and
+        </span>
+
+        <span data-start="11.270" data-end="13.960">
+          most often people connect wirelessly.
+        </span>
+
+        <span>
+
+        </span>
+      </p>
+
+      <p>
+
+
+      </p>
+    </div>
+
   </div>
 
+  <script>
+  $('video').mediaelementplayer({
+    features: ['playpause', 'tracks', 'progress', 'tracks', 'volume', 'fullscreen'],
+    startLanguage: 'en'
+  });
+  </script>
+  <script src="js/app.js"></script>
 
-
-
-
-
-
-  <script src="/js/app.js"></script>
-  <script src="/js/mediaelement.js"></script>
-  <!-- Add any other renderers you need; see Use Renderers for more information -->
-  <link rel="stylesheet" href="/path/to/mediaelementplayer.min.css" />
 
 </body>
 
