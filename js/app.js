@@ -12,17 +12,14 @@ video.addEventListener("timeupdate", () => {
     if (video.currentTime > lines[i].getAttribute("data-start")
     && video.currentTime < lines[i].getAttribute("data-end")) {
       // style the text that is being spoken
-      lines[i].style.backgroundColor = "yellow";
-      lines[i].style.color = "#fff";
+      lines[i].style.color = "coral";
     }
     // put styles back to normal
     else {
-      lines[i].style.backgroundColor = "#fff";
-      lines[i].style.color = "grey"
+      lines[i].style.color = ""
     }
   }
 });
-
 
 // add click event to go to that section of the video
 content.addEventListener("click", (event) => {

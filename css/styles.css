@@ -1,17 +1,45 @@
 
 /* BASE ---------------*/
 
+*, *:before, *:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
 .container {
+  font-family: 'Nunito', sans-serif;
+  color: #384047;
   max-width: 90%;
   margin: 10px auto;
 }
 
-
+#content {
+  padding: 10px 30px;
+  line-height: 1.5;
+  font-size: 1.2em;
+  color: #1b1b1c;
+}
 
 /* VIDEO --------------*/
 
 .videoWrapper {
-  width: 852px;
   margin: 0 auto;
   display: block;
+  width: 100%;
+  height: auto;
+}
+
+.mejs__controls {
+  background-color: lightskyblue !important;
+}
+
+@media (min-width: 768px) {
+  .container {
+    width: 70%;
+  }
+  #content {
+    padding: 10px 20px;
+    line-height: 1.7;
+  }
 }
