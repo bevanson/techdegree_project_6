@@ -25,10 +25,3 @@ video.addEventListener("timeupdate", () => {
     }
   }
 });
-
-// add click event to go to that section of the video
-content.addEventListener("click", (event) => {
-  if (event.target.tagName == 'SPAN') {
-    video.currentTime = event.target.getAttribute('data-start');
-  }
-});
