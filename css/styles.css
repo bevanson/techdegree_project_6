@@ -21,13 +21,12 @@
   color: #1b1b1c;
 }
 
+
 /* VIDEO --------------*/
 
 .videoWrapper {
   margin: 0 auto;
   display: block;
-  width: 100%;
-  height: auto;
 }
 
 .mejs__controls {
@@ -38,6 +37,7 @@
   .container {
     width: 70%;
   }
+
   #content {
     padding: 10px 20px;
     line-height: 1.7;

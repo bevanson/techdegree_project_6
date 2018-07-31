@@ -4,6 +4,11 @@ const lines = document.querySelectorAll('span');
 const video = document.querySelector('video');
 const content = document.getElementById('content');
 
+// add display items
+$('video').mediaelementplayer({
+  features: ['playpause', 'tracks', 'current', 'progress', 'duration', 'tracks', 'volume', 'fullscreen'],
+  startLanguage: 'en'
+});
 
 // Change background color for text being spoken
 video.addEventListener("timeupdate", () => {
